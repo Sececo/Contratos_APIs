@@ -36,7 +36,7 @@ router.get('/', controller.getAll);
  *     summary: Obtiene una tarea por su ID
  *     tags: [Tasks]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
@@ -115,12 +115,12 @@ router.get('/:id', controller.getById);
 router.post('/', controller.create);
 /**
  * @swagger
- * /tasks:
+ * /tasks/{id}:
  *   put:
  *     summary: Actualiza una tarea por su ID
  *     tags: [Tasks]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
@@ -147,12 +147,12 @@ router.post('/', controller.create);
 router.put('/:id', controller.update);
 /**
  * @swagger
- * /tasks:
+ * /tasks/{id}:
  *   delete:
  *     summary: Elimina una tarea por su ID
  *     tags: [Tasks]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:

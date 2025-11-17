@@ -36,7 +36,7 @@ router.get('/', controller.getAll);
  *     summary: Obtiene una persona por su ID
  *     tags: [People]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
@@ -118,12 +118,12 @@ router.get('/:id', controller.getById);
 router.post('/', controller.create);
 /**
  * @swagger
- * /people:
+ * /people/{id}:
  *   put:
  *     summary: Actualiza una persona por su ID
  *     tags: [People]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
@@ -150,12 +150,12 @@ router.post('/', controller.create);
 router.put('/:id', controller.update);
 /**
  * @swagger
- * /people:
+ * /people/{id}:
  *   delete:
  *     summary: Elimina una persona por su ID
  *     tags: [People]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:

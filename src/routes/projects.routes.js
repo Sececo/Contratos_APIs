@@ -32,7 +32,7 @@ router.get('/', controller.getAll);
  *     summary: Obtiene un proyecto por su ID
  *     tags: [Projects]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
@@ -100,12 +100,12 @@ router.get('/:id', controller.getById);
 router.post('/', controller.create);
 /**
  * @swagger
- * /projects:
+ * /projects/{id}:
  *   put:
  *     summary: Actualiza un proyecto por su ID
  *     tags: [Projects]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
@@ -130,12 +130,12 @@ router.post('/', controller.create);
 router.put('/:id', controller.update);
 /**
  * @swagger
- * /projects:
+ * /projects/{id}:
  *   delete:
  *     summary: Elimina un proyecto por su ID
  *     tags: [Projects]
  *     parameters:
- *       - in: query
+ *       - in: path
  *         name: id
  *         required: true
  *         schema:
